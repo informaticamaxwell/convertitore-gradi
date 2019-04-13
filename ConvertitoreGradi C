@@ -8,48 +8,76 @@ Code, Compile, Run and Debug online from anywhere in world.
 *******************************************************************************/
 #include <stdio.h>
 
-int
-main ()
+
+void main ()
 {
   int a;
   float celsius;
   float gradi;
-  float farenait_converter (gradi)
+  void farenait_converter (gradi)
   {
     float farenait = ((gradi * (9 / 5)) + 32);
-    printf ("%f", farenait);
+    printf ("F: %f", farenait);
     return farenait;
 
   }
 
-  float kelvin_converter (gradi)
+  void kelvin_converter (gradi)
   {
     float kelvin = gradi + 273.15;
-    printf ("%f", kelvin);
-    return kelvin;
+    printf ("K: %f", kelvin);
 
   }
-  float kelin_celsius (gradi)
+  void kelvin_celsius (gradi)
   {
     float kc = gradi - 273.15;
-    printf ("%f", kc);
-    return kc;
+    printf ("C: %f", kc);
   }
-  printf ("Quanti gradi ci sono: ") scanf ("%f", &celsius);
-  printf
-    ("Seleziona il convertitore \n[1]Da Celsius a Fahrenheit\n[2]Da Celsius e Kelvin\n[3]Da Kelvin a Celsius \n[4]Da Kelvin a Fahrenheit \n[5]Da Fahrenheit a Kelvin \n[6]Da Fahrenheit a Celsius");
+  void kel_fahr(gradi)
+  {
+    float kf = (((gradi - 273.15)*(9/5))+32);
+    printf = ("F: %f", kf);
+  }
+  void fahr_kel(gradi)
+  {
+    float fk = (((gradi - 32)*(5/9))+273.15);
+    printf("K: %f", fk);
+  }
+  void fahr_cel(gradi)
+  {
+    float fc = ((gradi -32)*(5/9));
+    printf("C: %f"fc)
+  }
+  
+  
+  printf ("Quanti gradi ci sono: ") 
+  scanf ("%f", &celsius);
+  printf("Seleziona il convertitore \n[1]Da Celsius a Fahrenheit\n[2]Da Celsius e Kelvin\n[3]Da Kelvin a Celsius \n[4]Da Kelvin a Fahrenheit \n[5]Da Fahrenheit a Kelvin \n[6]Da Fahrenheit a Celsius");
   scanf ("%d", &a);
   if (a == 1)
     {
-      farenait_converter (gradi);
+      farenait_converter (celsius);
     }
   if (a == 2)
-    {
-      kelvin_converter (gradi);
-    }
+  {
+    kelvin_converter (celsius);
+  }
   if (a == 3)
-    {
-      kelin_celsius (gradi);
-    }
-  return 0;
+  {
+    kelvin_celsius (celsius);
+  }
+  if ( a == 4 )
+  {
+    kel_fahr(celsius)
+  }
+    if (a == 5)
+  {
+    fahr_kel(celsius);
+  }
+  if ( a == 6 )
+  {
+    fahr_cel(celsius)
+  }
 }
+
+    
