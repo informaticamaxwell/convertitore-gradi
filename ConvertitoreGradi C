@@ -1,0 +1,55 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int
+main ()
+{
+  int a;
+  float celsius;
+  float gradi;
+  float farenait_converter (gradi)
+  {
+    float farenait = ((gradi * (9 / 5)) + 32);
+    printf ("%f", farenait);
+    return farenait;
+
+  }
+
+  float kelvin_converter (gradi)
+  {
+    float kelvin = gradi + 273.15;
+    printf ("%f", kelvin);
+    return kelvin;
+
+  }
+  float kelin_celsius (gradi)
+  {
+    float kc = gradi - 273.15;
+    printf ("%f", kc);
+    return kc;
+  }
+  printf ("Quanti gradi ci sono: ") scanf ("%f", &celsius);
+  printf
+    ("Seleziona il convertitore \n[1]Da Celsius a Fahrenheit\n[2]Da Celsius e Kelvin\n[3]Da Kelvin a Celsius \n[4]Da Kelvin a Fahrenheit \n[5]Da Fahrenheit a Kelvin \n[6]Da Fahrenheit a Celsius");
+  scanf ("%d", &a);
+  if (a == 1)
+    {
+      farenait_converter (gradi);
+    }
+  if (a == 2)
+    {
+      kelvin_converter (gradi);
+    }
+  if (a == 3)
+    {
+      kelin_celsius (gradi);
+    }
+  return 0;
+}
